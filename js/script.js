@@ -1,14 +1,12 @@
-const formulario = document.getSelector("#formCadastro");
+const botaoCriar = document.getElementById("botaoCriar");
+const retorno = document.getElementById("retorno");
 
-formulario.addEventListener("submit", function(event){
-    event.preventDefault();
-
-    const nome = document.querySelector("#nome").value;
-    const destino = document.querySelector("#destino").value;
-
-    const mensagem = document.querySelector("mensagem"):
-
-    mensagem.textContent = "Olá, " + nome + "! Sua próxima aventura será em " + destino + "!";
-
-    formulario.reset();
-})
+botaoCriar.addEventListener("click", () => {
+    retorno.style.backgroundColor = "#fde68a";
+    retorno.style.color = "#b45309";
+    retorno.style.fontSize = "28px";
+    retorno.style.textAlign = "center";
+    retorno.style.padding = "10px";
+    retorno.style.borderRadius = "8px";
+    retorno.textContent = "Olá, meu nome é Marcos!";
+});
