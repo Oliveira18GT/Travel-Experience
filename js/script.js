@@ -1,14 +1,11 @@
-const formulario = document.getSelector("#formCadastro");
+const botaoCriar = document.getElementById("botaoCriar");
+const botaoApagar = document.getElementById("botaoApagar");
+const retorno = document.getElementById("retorno");
 
-formulario.addEventListener("submit", function(event){
-    event.preventDefault();
+botaoCriar.addEventListener("click", () => {
+    retorno.textContent = "Hoje é um ótimo dia para aprender JS!";
+});
 
-    const nome = document.querySelector("#nome").value;
-    const destino = document.querySelector("#destino").value;
-
-    const mensagem = document.querySelector("mensagem"):
-
-    mensagem.textContent = "Olá, " + nome + "! Sua próxima aventura será em " + destino + "!";
-
-    formulario.reset();
-})
+botaoApagar.addEventListener("click", () => {
+    retorno.textContent = "";
+});
