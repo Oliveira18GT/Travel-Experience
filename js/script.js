@@ -1,4 +1,5 @@
 const botaoCriar = document.getElementById("botaoCriar");
+const botaoApagar = document.getElementById("botaoApagar");
 const retorno = document.getElementById("retorno");
 
 botaoCriar.addEventListener("click", () => {
@@ -9,4 +10,13 @@ botaoCriar.addEventListener("click", () => {
     retorno.style.padding = "10px";
     retorno.style.borderRadius = "8px";
     retorno.textContent = "Olá, meu nome é Marcos!";
+});
+
+botaoApagar.addEventListener("click", () => {
+    retorno.textContent = "";
+    retorno.style.background = "";
+    retorno.style.color = "";
+    retorno.style.fontSize = "";
+    retorno.style.padding = "";
+    retorno.style.borderRadius = "";
 });
