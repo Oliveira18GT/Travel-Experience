@@ -1,22 +1,15 @@
-const botaoCriar = document.getElementById("botaoCriar");
-const botaoApagar = document.getElementById("botaoApagar");
+const formEstilo = document.getElementById("formEstilo");
+const campoCor = document.getElementById("campoCor");
+const campoPadding = document.getElementById("campoPadding");
+const campoTamanho = document.getElementById("campoTamanho");
 const retorno = document.getElementById("retorno");
 
-botaoCriar.addEventListener("click", () => {
-    retorno.style.backgroundColor = "#fde68a";
-    retorno.style.color = "#b45309";
-    retorno.style.fontSize = "28px";
-    retorno.style.textAlign = "center";
-    retorno.style.padding = "10px";
-    retorno.style.borderRadius = "8px";
-    retorno.textContent = "Olá, meu nome é Marcos!";
-});
+function aplicarEstilo(event){
+    event.preventDefault();
 
-botaoApagar.addEventListener("click", () => {
-    retorno.textContent = "";
-    retorno.style.background = "";
-    retorno.style.color = "";
-    retorno.style.fontSize = "";
-    retorno.style.padding = "";
-    retorno.style.borderRadius = "";
-});
+    retorno.style.color = campoCor.value;
+    retorno.style.color = campoPadding.value + "px";
+    retorno.style.fontSize = campoTamanho.value + "px";
+}
+
+formEstilo.addEventListener("submit", aplicarEstilo);
